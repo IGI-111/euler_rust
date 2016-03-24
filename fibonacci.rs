@@ -15,7 +15,7 @@ fn fibonacci(upper_bound: u32) -> Vec<u32> {
 }
 pub fn main() {
     let sum: u32 = fibonacci(4000000).iter().fold(0, |a,b|
-                                                 if b & 1 == 0 {a+b}
+                                                 if b % 2 == 0 {a+b}
                                                  else {a});
     println!("{:?} {}", fibonacci(4000000), sum);
 }
